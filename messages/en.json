@@ -1,0 +1,49 @@
+{
+  "title": "PLUS+",
+  "slogan": "Boost your teams' performance and productivity with tailor-made Excel and PowerPoint add-ins.",
+  "description": "PLUS+ is a tailor-made software solution that boosts team performance and productivity through customized add-ins for Excel and PowerPoint. Integrating the latest advances in artificial intelligence and OCR, PLUS+ enables fast and accurate data extraction, as well as automated digital recognition.",
+  "sections": {
+    "extraction": {
+      "title": "Automated Extraction and Classification",
+      "description": "Advanced data extraction, automatic classification of balance sheets and income statements for simplified management."
+    },
+    "analysis": {
+      "title": "Periodic Analysis",
+      "description": "Generation of detailed monthly reports for regular and reliable monitoring."
+    },
+    "customization": {
+      "title": "Total Customization",
+      "description": "Adaptation of digital formats (tables, cells, columns, graphs, etc.) and interfaces (PowerPoint export, automatic refresh) according to specific client needs."
+    },
+    "licensing": {
+      "title": "Flexible Licenses",
+      "description": "Available as an annual license from €200 per user (minimum 5 users, with volume discounts) or as a single license upon request."
+    }
+  },
+  "team": {
+    "title": "Our Team",
+    "description": "Meet the experts behind PLUS+ Technology",
+    "member1": {
+      "name": "Hugo Gaugler",
+      "role": "Founder & CEO",
+      "description": "With extensive experience in financial technology and automation"
+    },
+    "member2": {
+      "name": "Thomas Chaix",
+      "role": "CTO",
+      "description": "Expert in software architecture and technical innovation"
+    },
+    "member3": {
+      "name": "Andrea",
+      "role": "Financial Due Diligence Expert",
+      "description": "Specialist in financial analysis and due diligence processes"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with us to learn more about how PLUS+ can help your business",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message"
+  }
+}

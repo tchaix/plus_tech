@@ -1,0 +1,49 @@
+{
+  "title": "PLUS+",
+  "slogan": "Boostez la performance et la productivité de vos équipes avec des add-ins Excel et PowerPoint sur mesure.",
+  "description": "PLUS+ est une solution logicielle sur-mesure qui booste la performance et la productivité des équipes grâce à des add-ins personnalisés pour Excel et PowerPoint. Intégrant les dernières avancées en intelligence artificielle et OCR, PLUS+ permet une extraction des données rapide et précise, ainsi qu'une reconnaissance numérique automatisée.",
+  "sections": {
+    "extraction": {
+      "title": "Extraction et Classification Automatisées",
+      "description": "Extraction avancée des données, classification automatique des bilans et comptes de résultats pour une gestion simplifiée."
+    },
+    "analysis": {
+      "title": "Analyse Périodique",
+      "description": "Génération de rapports mensuels détaillés pour un suivi régulier et fiable."
+    },
+    "customization": {
+      "title": "Personnalisation Totale",
+      "description": "Adaptation des formats digitaux (tableaux, cellules, colonnes, graphiques, etc.) et des interfaces (exportation PowerPoint, rafraîchissement automatique) selon les besoins spécifiques du client."
+    },
+    "licensing": {
+      "title": "Licences Flexibles",
+      "description": "Disponible en licence annuelle à partir de 200€ par utilisateur (minimum 5 utilisateurs, avec des remises selon le volume) ou en licence unique sur demande."
+    }
+  },
+  "team": {
+    "title": "Notre Équipe",
+    "description": "Découvrez les experts derrière PLUS+ Technology",
+    "member1": {
+      "name": "Hugo Gaugler",
+      "role": "Fondateur & CEO",
+      "description": "Avec une vaste expérience en technologie financière et en automatisation"
+    },
+    "member2": {
+      "name": "Thomas Chaix",
+      "role": "CTO",
+      "description": "Expert en architecture logicielle et innovation technique"
+    },
+    "member3": {
+      "name": "Andrea",
+      "role": "Experte en Due Diligence Financière",
+      "description": "Spécialiste en analyse financière et processus de due diligence"
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Prenez contact avec nous pour en savoir plus sur comment PLUS+ peut aider votre entreprise",
+    "email": "Email",
+    "message": "Message",
+    "send": "Envoyer le message"
+  }
+}
