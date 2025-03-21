@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { Email } from '../../components/Email';
 import { z } from 'zod';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -18,14 +19,12 @@ export async function POST(request: Request) {
 
     // Send email using Resend
     await resend.emails.send({
-      from: 'contact@plus-technology.co',
+      from: email,
       to: 'h.gaugler@plus-technology.co',
-      subject: 'New Contact Form Submission',
+      subject: 'New Contact',
+      react: Email({ email , message }),
       html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>From:</strong> ${email}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
+        
       `,
     });
 
