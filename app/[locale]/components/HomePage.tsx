@@ -2,12 +2,41 @@
 
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { ChevronRightIcon } from '@heroicons/react/24/outline';
 import LanguageSwitcher from './LanguageSwitcher';
+import { useState } from 'react';
 import Section from './Section';
 
 export default function HomePage() {
   const t = useTranslations();
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('loading');
+
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, message }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      setStatus('success');
+      setEmail('');
+      setMessage('');
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setStatus('error');
+    }
+  };
 
   return (
     <main className="min-h-screen bg-white">
@@ -31,7 +60,7 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] pt-16">
+      <section className="relative h-[50vh] pt-16">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700 mix-blend-multiply" />
         <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
@@ -90,7 +119,7 @@ export default function HomePage() {
             <div className="text-center">
               <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-6">
                 <Image
-                    src="/images/andrea.png"
+                    src="/images/hugo.png"
                     alt={t('team.member3.name')}
                     width={128}
                     height={128}
@@ -104,7 +133,7 @@ export default function HomePage() {
             <div className="text-center">
               <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-6" >
                 <Image
-                    src="/images/andrea.png"
+                    src="/images/thomas.png"
                     alt={t('team.member3.name')}
                     width={128}
                     height={128}
@@ -141,7 +170,7 @@ export default function HomePage() {
             <p className="text-xl text-gray-600">{t('contact.description')}</p>
           </div>
           <div className="max-w-xl mx-auto">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                   {t('contact.email')}
@@ -149,6 +178,9 @@ export default function HomePage() {
                 <input
                   type="email"
                   id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>
@@ -159,15 +191,29 @@ export default function HomePage() {
                 <textarea
                   id="message"
                   rows={4}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                disabled={status === 'loading'}
+                className={`w-full px-6 py-3 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+                  status === 'loading'
+                    ? 'bg-blue-400 cursor-not-allowed'
+                    : 'bg-blue-600 hover:bg-blue-700'
+                } text-white`}
               >
-                {t('contact.send')}
+                {status === 'loading' ? 'Sending...' : t('contact.send')}
               </button>
+              {status === 'success' && (
+                <p className="text-green-600 text-center mt-4">Message sent successfully!</p>
+              )}
+              {status === 'error' && (
+                <p className="text-red-600 text-center mt-4">Failed to send message. Please try again.</p>
+              )}
             </form>
           </div>
         </div>
