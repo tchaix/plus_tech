@@ -17,7 +17,7 @@ export default function HomePage() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Image
-                src="/images/plus-logo.svg"
+                src="/images/logo.png"
                 alt="PLUS+ Logo"
                 width={120}
                 height={48}
@@ -38,19 +38,14 @@ export default function HomePage() {
           <div className="text-white max-w-3xl">
             <div className="mb-8">
               <Image
-                src="/images/plus-logo.svg"
+                src="/images/logo.png"
                 alt="PLUS+ Logo"
                 width={300}
                 height={120}
-                className="w-auto h-24 brightness-0 invert"
                 priority
               />
             </div>
             <p className="text-xl sm:text-2xl mb-8">{t('slogan')}</p>
-            <button className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold flex items-center group hover:bg-blue-50 transition-colors">
-              Learn More
-              <ChevronRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
           </div>
         </div>
       </section>
@@ -58,7 +53,7 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our Solutions</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Solutions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Section
               title={t('sections.extraction.title')}
@@ -93,19 +88,43 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
             <div className="text-center">
-              <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-6" />
+              <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-6">
+                <Image
+                    src="/images/andrea.png"
+                    alt={t('team.member3.name')}
+                    width={128}
+                    height={128}
+                    className="object-cover w-full h-full"
+                  />
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">{t('team.member1.name')}</h3>
               <p className="text-blue-600 mb-4">{t('team.member1.role')}</p>
               <p className="text-gray-600">{t('team.member1.description')}</p>
             </div>
             <div className="text-center">
-              <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-6" />
+              <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-6" >
+                <Image
+                    src="/images/andrea.png"
+                    alt={t('team.member3.name')}
+                    width={128}
+                    height={128}
+                    className="object-cover w-full h-full"
+                  />
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">{t('team.member2.name')}</h3>
               <p className="text-blue-600 mb-4">{t('team.member2.role')}</p>
               <p className="text-gray-600">{t('team.member2.description')}</p>
             </div>
             <div className="text-center">
-              <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-6" />
+              <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-6" >
+                <Image
+                    src="/images/andrea.png"
+                    alt={t('team.member3.name')}
+                    width={128}
+                    height={128}
+                    className="object-cover w-full h-full"
+                  />
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">{t('team.member3.name')}</h3>
               <p className="text-blue-600 mb-4">{t('team.member3.role')}</p>
               <p className="text-gray-600">{t('team.member3.description')}</p>
@@ -160,7 +179,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
             <div>
               <Image
-                src="/images/plus-logo.svg"
+                src="/images/logo.png"
                 alt="PLUS+ Logo"
                 width={120}
                 height={48}
