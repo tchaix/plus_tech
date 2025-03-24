@@ -25,7 +25,7 @@
     "description": "Meet the experts behind PLUS+ Technology",
     "member1": {
       "name": "Hugo Gaugler",
-      "role": "Founder & CEO",
+      "role": "CEO",
       "description": "With extensive experience in financial technology and automation"
     },
     "member2": {
@@ -34,8 +34,8 @@
       "description": "Expert in software architecture and technical innovation"
     },
     "member3": {
-      "name": "Andrea",
-      "role": "Financial Due Diligence Expert",
+      "name": "Andrea Paolo Pacilli",
+      "role": "COO",
       "description": "Specialist in financial analysis and due diligence processes"
     }
   },
