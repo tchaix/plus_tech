@@ -14,6 +14,9 @@ export function generateMetadata({ params: { locale } }: { params: { locale: str
   return {
     title: 'PLUS+ Technology',
     description: 'Boost your teams\' performance with PLUS+ Technology',
+    icons: {
+      icon: '/favicon.svg',
+    },
     alternates: {
       languages: {
         'en': '/en',
@@ -39,9 +42,6 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="data:," />
-      </head>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
