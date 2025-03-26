@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
 import LanguageSwitcher from './LanguageSwitcher';
+import YouTube, { YouTubeProps } from 'react-youtube';
 import Section from './Section';
 
 export default function HomePage() {
@@ -38,6 +39,20 @@ export default function HomePage() {
       console.error('Error sending message:', error);
       setStatus('error');
     }
+  };
+
+  const onPlayerReady: YouTubeProps['onReady'] = (event) => {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
+  }
+  const videoOpts = {
+    height: '100%',
+    width: '100%',
+    playerVars: {
+      autoplay: 0,
+      modestbranding: 1,
+      rel: 0,
+    },
   };
 
   return (
@@ -109,6 +124,27 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* Video Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Découvrez PLUS+ en action</h2>
+            <p className="text-xl text-gray-600">Regardez comment notre solution peut transformer votre workflow</p>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-100 to-white p-8">
+            <div className="aspect-w-16 aspect-h-9">
+              <YouTube
+                videoId="x-GE5aA1Q00"
+                opts={videoOpts}
+                onReady={onPlayerReady}
+                className="w-full h-full rounded-xl shadow-lg"
+                iframeClassName="w-full h-full rounded-xl"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/5 to-transparent pointer-events-none"></div>
+          </div>
+        </div>
+      </section>        
 
       {/* Team Section */}
       <section className="py-24 bg-white">
