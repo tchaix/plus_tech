@@ -128,8 +128,8 @@ export default function HomePage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Découvrez PLUS+ en action</h2>
-            <p className="text-xl text-gray-600">Regardez comment notre solution peut transformer votre workflow</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('video.title')}</h2>
+            <p className="text-xl text-gray-600">{t('video.description')}</p>
           </div>
           <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-100 to-white p-8">
             <div className="aspect-w-16 aspect-h-9">
