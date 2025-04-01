@@ -171,20 +171,6 @@ export default function HomePage() {
             <div className="text-center">
               <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-6" >
                 <Image
-                    src="/images/thomas.png"
-                    alt={t('team.member3.name')}
-                    width={128}
-                    height={128}
-                    className="object-cover w-full h-full"
-                  />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{t('team.member2.name')}</h3>
-              <p className="text-blue-600 mb-4">{t('team.member2.role')}</p>
-              <p className="text-gray-600">{t('team.member2.description')}</p>
-            </div>
-            <div className="text-center">
-              <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-6" >
-                <Image
                     src="/images/andrea.png"
                     alt={t('team.member3.name')}
                     width={128}
@@ -195,6 +181,20 @@ export default function HomePage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">{t('team.member3.name')}</h3>
               <p className="text-blue-600 mb-4">{t('team.member3.role')}</p>
               <p className="text-gray-600">{t('team.member3.description')}</p>
+            </div>
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-6" >
+                <Image
+                    src="/images/thomas.png"
+                    alt={t('team.member3.name')}
+                    width={128}
+                    height={128}
+                    className="object-cover w-full h-full"
+                  />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t('team.member2.name')}</h3>
+              <p className="text-blue-600 mb-4">{t('team.member2.role')}</p>
+              <p className="text-gray-600">{t('team.member2.description')}</p>
             </div>
           </div>
         </div>
